@@ -18,7 +18,7 @@ $(function(){
     });
     if($(window).width() <= 991){
         $(".section-nine .content ").addClass("owl-carousel owl-theme");
-        $("section-ten .part-con ").addClass("owl-carousel owl-theme");
+        $(".section-ten .part-con ").addClass("owl-carousel owl-theme");
         $('.section-nine .owl-carousel ').owlCarousel({
             autoplay: true,
             rtl:true,
