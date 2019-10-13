@@ -1998,13 +1998,21 @@ h3 {
     @media (max-width: 991px) {
       .section-eight .social .social-link {
         padding: 45px 0; } }
-    .section-eight .social .social-link a {
-      -webkit-transition: .5s;
-      transition: .5s; }
-      .section-eight .social .social-link a:hover {
-        -webkit-filter: blur(1px);
-                filter: blur(1px);
-        opacity: .7; }
+    .section-eight .social .social-link a:hover {
+      -webkit-animation: link 1s ease-in-out;
+              animation: link 1s ease-in-out; }
+
+@-webkit-keyframes link {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
+
+@keyframes link {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
   .section-eight .img-con {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -2055,7 +2063,7 @@ h3 {
     .section-eight .img-con img:nth-of-type(4) {
       left: 81%;
       top: 70%;
-      animation: five-1 2s linear infinite alternate-reverse; }
+      animation: eight-4 2s linear infinite alternate-reverse; }
       @media (max-width: 991px) {
         .section-eight .img-con img:nth-of-type(4) {
           left: 72%;
@@ -2078,8 +2086,8 @@ h3 {
     .section-eight .img-con img:nth-of-type(5) {
       left: 65%;
       top: 72%;
-      -webkit-animation: five-1 2s linear infinite alternate;
-              animation: five-1 2s linear infinite alternate; }
+      -webkit-animation: eight-4 2s linear infinite alternate;
+              animation: eight-4 2s linear infinite alternate; }
       @media (max-width: 991px) {
         .section-eight .img-con img:nth-of-type(5) {
           left: 51%;
@@ -2100,8 +2108,8 @@ h3 {
     .section-eight .img-con img:nth-of-type(6) {
       left: 50%;
       top: 68%;
-      -webkit-animation: five-1 2s linear infinite alternate;
-              animation: five-1 2s linear infinite alternate; }
+      -webkit-animation: eight-4 2s linear infinite alternate;
+              animation: eight-4 2s linear infinite alternate; }
       @media (max-width: 991px) {
         .section-eight .img-con img:nth-of-type(6) {
           left: 29%;
@@ -2122,8 +2130,8 @@ h3 {
     .section-eight .img-con img:nth-of-type(7) {
       left: 46%;
       top: 25%;
-      -webkit-animation: five-1 2s linear infinite alternate;
-              animation: five-1 2s linear infinite alternate; }
+      -webkit-animation: eight-4 2s linear infinite alternate;
+              animation: eight-4 2s linear infinite alternate; }
       @media (max-width: 991px) {
         .section-eight .img-con img:nth-of-type(7) {
           left: 25%;
@@ -2183,6 +2191,22 @@ h3 {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1; } }
+
+@-webkit-keyframes eight-4 {
+  0% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg); }
+  100% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg); } }
+
+@keyframes eight-4 {
+  0% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg); }
+  100% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg); } }
 
 @-webkit-keyframes nine {
   0% {
@@ -2401,7 +2425,9 @@ h3 {
     .section-ten .part-con .part img {
       -webkit-transition: .5s;
       transition: .5s;
-      opacity: 0.4; }
+      opacity: 0.4;
+      -webkit-filter: saturate(0);
+              filter: saturate(0); }
       @media (max-width: 991px) {
         .section-ten .part-con .part img {
           opacity: 1; } }
