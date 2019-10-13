@@ -1,3 +1,11 @@
+$(window).load(function () {
+    $(".loder").fadeOut(500,function () {
+        $(this).remove();
+        $("body").removeClass("over");
+
+    });
+});
+
 $(function(){
     $(window).on("scroll", function(){
         $(window).scrollTop()>12?
