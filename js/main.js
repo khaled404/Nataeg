@@ -51,8 +51,8 @@ $(function(){
 
 
     });
-    $(".nav-torger").on("click",function(){
-        $(this).toggleClass("active");
+    $(".nav-torger , .menu  a").on("click",function(){
+        $(".nav-torger").toggleClass("active");
         $(".menu").toggleClass("active");
         $("body").toggleClass("over");
 
@@ -88,10 +88,10 @@ $(function(){
             smartSpeed: 1000,
             responsive:{
                 0:{
-                    items:2
+                    items:1
                 },
                 600:{
-                    items:3
+                    items:2
                 },
                 992:{
                     items:3
