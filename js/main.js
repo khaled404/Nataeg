@@ -5,8 +5,11 @@ $(window).load(function () {
         $(".section-one .img-con").addClass("active");
     });
 });
-
 $(function(){
+    $("#pop-open , .pop-torger").on('click',function(e){
+        e.preventDefault();
+        $('.pop-up').toggleClass('active')
+    });
     $(window).on("scroll", function(){
         $(window).scrollTop()>12?
         $(".main-nav").addClass("scrolled")
@@ -43,7 +46,7 @@ $(function(){
             $(".section-eight .img-con").addClass("active");
         }
         let eleven = $(".section-eleven").offset().top ;
-        let elevenOf = eleven - 249;
+        let elevenOf = eleven - 349;
 
         if($(window).scrollTop() > elevenOf ){
             $(".section-eleven").addClass("active");
@@ -56,6 +59,17 @@ $(function(){
         $(".menu").toggleClass("active");
         $("body").toggleClass("over");
 
+    });
+    $('a[data-scroll]').click(function (e) {
+        e.preventDefault();
+        //Set Offset Distance from top to account for fixed nav
+        var offset = 80;
+        var target = ('#' + $(this).data('scroll'));
+        var $target = $(target);
+        //Animate the scroll to, include easing lib if you want more fancypants easings
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - offset
+        }, 1000);
     });
     if($(window).width() <= 991){
         $(".section-nine .content ").addClass("owl-carousel owl-theme");
