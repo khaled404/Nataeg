@@ -148,6 +148,8 @@ h3 {
   width: 100%;
   -webkit-transform: skew(-14deg) translateX(-120%);
           transform: skew(-14deg) translateX(-120%);
+  opacity: 0;
+  visibility: hidden;
   right: 0;
   top: 0;
   bottom: 0;
@@ -236,6 +238,9 @@ h3 {
         width: 90%; } }
     .pop-up .form-container form {
       width: 100%; }
+      @media (min-width: 992px) {
+        .pop-up .form-container form {
+          width: 384px; } }
     .pop-up .form-container h2 {
       font-size: 25px;
       font-family: "ITC-W23Bd";
@@ -319,7 +324,9 @@ h3 {
             top: 50%; } }
   .pop-up.active {
     -webkit-transform: skew(0) translateX(0);
-            transform: skew(0) translateX(0); }
+            transform: skew(0) translateX(0);
+    opacity: 1;
+    visibility: visible; }
     .pop-up.active h2 {
       -webkit-transition: all .4s 190ms;
       transition: all .4s 190ms;
